@@ -7,22 +7,18 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.kafka.core.KafkaTemplate
-import org.springframework.kafka.support.KafkaHeaders
 import org.springframework.kafka.support.KafkaHeaders.TOPIC
-import org.springframework.kafka.support.SendResult
 import org.springframework.messaging.support.MessageBuilder
-import org.springframework.util.concurrent.ListenableFuture
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-import java.util.concurrent.CompletableFuture
 
 
 @RestController
-@RequestMapping("/product")
-class LogController(
+@RequestMapping("/producer/add-product")
+class ProducerController(
     @Value("\${kafka.topics.product}") val topic: String,
     @Autowired
     private val kafkaTemplate: KafkaTemplate<String, Any>

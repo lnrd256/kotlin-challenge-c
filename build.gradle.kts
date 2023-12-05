@@ -25,9 +25,12 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.springframework.kafka:spring-kafka")
+	implementation ("org.apache.kafka:kafka-clients")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	// https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka
-	implementation("org.springframework.kafka:spring-kafka:3.1.0")
+	testImplementation("org.springframework.kafka:spring-kafka-test")
+	runtimeOnly("org.postgresql:postgresql")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.2.0")
 }
 
 tasks.withType<KotlinCompile> {

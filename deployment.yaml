@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kotlin-challenge
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kotlin-challenge
+  template:
+    metadata:
+      labels:
+        app: kotlin-challenge
+    spec:
+      containers:
+        - name: kotlin-challenge
+          image: lnrd256/kotlin-challenge-producer:2.0
