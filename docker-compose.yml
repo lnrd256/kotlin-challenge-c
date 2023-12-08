@@ -38,6 +38,8 @@ services:
     networks: [ myNet ]
     environment:
       <<: *env_postgres
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   kafka:
     image: bitnami/kafka:3.3.1
