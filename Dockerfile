@@ -1,6 +1,6 @@
 FROM gradle:jdk17 AS builder
 COPY . .
-RUN gradle build --refresh-dependencies
+RUN gradle build
 
 FROM openjdk:17
 WORKDIR /code
