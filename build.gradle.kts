@@ -29,6 +29,9 @@ dependencies {
 	implementation("org.springframework.kafka:spring-kafka:3.1.0")
 	runtimeOnly("org.postgresql:postgresql")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.2.0")
+	testImplementation("org.springframework.kafka:spring-kafka-test:3.1.0")
+	testImplementation("com.h2database:h2")
+
 }
 
 tasks.withType<KotlinCompile> {
@@ -39,6 +42,6 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.withType<Test> {
-
+	useJUnitPlatform()
 }
 

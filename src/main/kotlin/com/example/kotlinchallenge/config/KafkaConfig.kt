@@ -25,6 +25,6 @@ class KafkaConfig(
 
     @Bean
     fun porduto(): NewTopic {
-        return NewTopic(topic, 1, 1.toShort())
+        return NewTopic(topic, 3, 2.toShort())
     }
 }
