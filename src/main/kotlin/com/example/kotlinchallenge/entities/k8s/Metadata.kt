@@ -1,4 +1,4 @@
-package com.example.kotlinchallenge.entities
+package com.example.kotlinchallenge.entities.k8s
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
